@@ -1,6 +1,6 @@
-# Portfolio CV - Nguyễn Văn An
+# Portfolio CV - Hoàng Diệu Chiêm
 
-Trang portfolio/CV cá nhân giới thiệu Nguyễn Văn An, Frontend Developer. Dự án được xây dựng bằng HTML và CSS thuần, trình bày thông tin giới thiệu, kỹ năng, các dự án tiêu biểu và phương thức liên hệ trong một trang web responsive.
+Trang portfolio/CV cá nhân giới thiệu Hoàng Diệu Chiêm, Frontend Developer. Dự án được xây dựng bằng HTML và CSS thuần, trình bày thông tin giới thiệu, kỹ năng, các dự án tiêu biểu và phương thức liên hệ trong một trang web responsive.
 
 ## Chức năng
 
@@ -47,9 +47,9 @@ Trang portfolio/CV cá nhân giới thiệu Nguyễn Văn An, Frontend Developer
 1. Tải hoặc sao chép mã nguồn dự án về máy.
 2. Giữ nguyên cấu trúc thư mục để các đường dẫn tới CSS và ảnh hoạt động:
    - CSS: `assets/css/styles.css`
-   - Ảnh đại diện: `assets/img/avatar.jpg`
+   - Ảnh đại diện: `ass/css/img`
 3. Mở `index.html` bằng trình soạn thảo để chỉnh sửa nội dung.
-4. Trước khi xuất bản, cập nhật thông tin mẫu trong `index.html`, bao gồm email, URL GitHub, LinkedIn, mô tả và liên kết các dự án. Thay ảnh tại `assets/img/avatar.jpg` nếu cần; nên giữ nguyên tên tệp hoặc cập nhật đường dẫn ảnh tương ứng trong HTML.
+4. Trước khi xuất bản, cập nhật thông tin mẫu trong `index.html`, bao gồm email, URL GitHub, LinkedIn, mô tả và liên kết các dự án. Thay ảnh tại `assets/css/images.jpg` nếu cần; nên giữ nguyên tên tệp hoặc cập nhật đường dẫn ảnh tương ứng trong HTML.
 
 Dự án không có tệp cấu hình môi trường `.env` và không cần cài đặt dependency.
 
