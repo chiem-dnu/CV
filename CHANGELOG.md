@@ -2,7 +2,7 @@
 
 ## [v1.0] - 2026-10-27
 
-Phiên bản phát hành đầu tiên của Portfolio CV cá nhân Nguyễn Văn An.
+Phiên bản phát hành đầu tiên của Portfolio CV cá nhân Hoàng Diệu Chiêm
 
 ### Chức năng mới
 
