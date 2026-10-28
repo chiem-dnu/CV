@@ -11,12 +11,12 @@
 
 <style>
 :root {
---bg: #09090f;
---text: #ffffff;
---muted: #c2c0d0;
---accent: #8884f8;
---accent2: #645cf3;
---border: rgba(255,255,255,.14);
+--bg: #d3c756;
+--text: #f4f6f4;
+--muted: #64c93f;
+--accent: #e0e6dd;
+--accent2: #000101;
+--border: rgba(2, 3, 2, 0.14);
 }
 
 * {
@@ -57,7 +57,7 @@ position: fixed;
 inset: 0;
 z-index: -1;
 overflow: hidden;
-background: #09090f;
+background: #fff9c4;
 pointer-events: none;
 }
 
@@ -72,20 +72,20 @@ animation: floatGlow 12s ease-in-out infinite alternate;
 }
 
 .glow.one {
-background: #173ecb;
+background: #eeede9;
 top: -30%;
 left: 15%;
 }
 
 .glow.two {
-background: #007c99;
+background: #d1d54d;
 right: -22%;
 top: 25%;
 animation-delay: -4s;
 }
 
 .glow.three {
-background: #8d417b;
+background: #fff0a8;
 left: -30%;
 bottom: -40%;
 animation-delay: -7s;
@@ -140,7 +140,7 @@ align-items: center;
 
 .nav-links a {
 font-size: 14px;
-color: #e7e6f1;
+color: #eeee6c;
 transition: .3s;
 }
 
@@ -182,7 +182,7 @@ box-shadow: 0 10px 35px rgba(116,109,245,.25);
 .btn:hover {
 background: var(--accent2);
 transform: translateY(-4px);
-box-shadow: 0 15px 40px rgba(116,109,245,.5);
+box-shadow: 0 15px 40px rgba(222, 88, 193, 0.5);
 }
 
 .menu-btn {
@@ -275,8 +275,15 @@ font-weight: 500;
 letter-spacing: -1.5px;
 }
 
+#home .hero h1,
+#home .hero h1 span,
+#about .section-title,
+#about .section-title span {
+color: #000;
+}
+
 .hero h1 span {
-color: #aaa6ff;
+color: #000;
 }
 
 .hero-desc {
@@ -343,10 +350,16 @@ margin-bottom: 40px;
 }
 
 .glass {
-background: rgba(255,255,255,.055);
+background: rgba(30, 95, 180, 0.9);
 border: 1px solid var(--border);
 border-radius: 22px;
 backdrop-filter: blur(14px);
+}
+
+.glass p,
+.glass .info-row,
+.glass .project-body small {
+color: #e3efff;
 }
 
 /* GIỚI THIỆU */
@@ -400,15 +413,15 @@ transition: .35s;
 
 .card:hover {
 transform: translateY(-10px);
-background: rgba(130,120,255,.12);
-border-color: rgba(160,150,255,.5);
+background: #2563b8;
+border-color: rgba(170, 210, 255, 0.65);
 }
 
 .card-icon {
 width: 55px;
 height: 55px;
 border-radius: 15px;
-background: rgba(135,130,248,.2);
+background: rgba(125, 190, 255, 0.28);
 display: grid;
 place-items: center;
 font-size: 26px;
@@ -452,7 +465,7 @@ transform: translateY(-10px);
 
 .project-image {
 height: 220px;
-background: linear-gradient(135deg,#28285c,#5752a5);
+background: linear-gradient(135deg,#174a8b,#3185d3);
 display: grid;
 place-items: center;
 font-family: "Playfair Display", serif;
@@ -461,11 +474,11 @@ color: white;
 }
 
 .project-card:nth-child(2) .project-image {
-background: linear-gradient(135deg,#074d64,#4881a6);
+background: linear-gradient(135deg,#155b9c,#45a0e8);
 }
 
 .project-card:nth-child(3) .project-image {
-background: linear-gradient(135deg,#59315c,#9d5a9b);
+background: linear-gradient(135deg,#234f9b,#538de0);
 }
 
 .project-body {
@@ -493,8 +506,8 @@ text-align: center;
 padding: 70px 30px;
 background: linear-gradient(
 135deg,
-rgba(90,80,210,.2),
-rgba(20,20,35,.75)
+rgba(38, 118, 205, 0.86),
+rgba(22, 75, 145, 0.96)
 );
 }
 
@@ -515,7 +528,7 @@ footer {
 padding: 30px 5%;
 text-align: center;
 border-top: 1px solid var(--border);
-color: #9996ac;
+color: #b4c62b;
 font-size: 13px;
 }
 
@@ -650,11 +663,149 @@ opacity: 1;
 transform: none;
 }
 }
+/* GIAO DIỆN ĐĂNG NHẬP VÀ ĐĂNG KÝ */
+body.auth-locked > header,
+body.auth-locked > main,
+body.auth-locked > footer {
+    display: none;
+}
+
+.auth-screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: #fff;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 22px;
+    background: #fce4ec;
+    border: 1px solid #f3bfd0;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.auth-card p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.auth-card label {
+    display: block;
+    margin: 14px 0 7px;
+    color: #333;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 9px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    color: #222;
+    outline: none;
+}
+
+.auth-card input:focus {
+    border-color: #8884f8;
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 30px;
+    background: #8884f8;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    background: #645cf3;
+}
+
+.auth-card .switch-link {
+    margin-top: 20px;
+    color: #aaa6ff;
+    cursor: pointer;
+}
+
+#authMessage {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ffb6c1;
+}
+
+#home .hero-content > h1,
+#home .hero-content > h1 span {
+    color: #000 !important;
+}
+
+#skills .section-title,
+#skills .section-title span,
+#services .section-title,
+#services .section-title span,
+#portfolio .section-title,
+#portfolio .section-title span {
+    color: #f97316 !important;
+}
 </style>
 </head>
 
 <body>
+<!-- FORM ĐĂNG NHẬP / ĐĂNG KÝ -->
+<section class="auth-screen" id="authScreen">
+    <div class="auth-card">
+        <h2 id="authTitle">Đăng nhập</h2>
+        <p>Chào mừng bạn đến với Portfolio</p>
 
+        <form id="authForm">
+            <div id="nameGroup" hidden>
+                <label for="authName">Họ và tên</label>
+                <input id="authName" type="text"
+                       placeholder="Nhập họ tên">
+            </div>
+
+            <label for="authEmail">Email</label>
+            <input id="authEmail" type="email"
+                   placeholder="Nhập email" required>
+
+            <label for="authPassword">Mật khẩu</label>
+            <input id="authPassword" type="password"
+                   placeholder="Ít nhất 6 ký tự"
+                   minlength="6" required>
+
+            <div id="confirmGroup" hidden>
+                <label for="authConfirm">Xác nhận mật khẩu</label>
+                <input id="authConfirm" type="password"
+                       placeholder="Nhập lại mật khẩu">
+            </div>
+
+            <button type="submit" id="authButton">
+                Đăng nhập
+            </button>
+
+            <div id="authMessage" role="status"></div>
+        </form>
+
+        <p class="switch-link" id="switchMode">
+            Chưa có tài khoản? Đăng ký
+        </p>
+    </div>
+</section>
 <!-- NỀN ĐỘNG -->
 <div class="background" aria-hidden="true">
 <div class="glow one"></div>
@@ -744,9 +895,9 @@ rel="noopener noreferrer" aria-label="Instagram">◎</a>
 
 <!-- GIỚI THIỆU -->
 <section class="section reveal" id="about">
-<p class="section-label">01 / ABOUT ME</p>
+<p class="section-label">01 / Giới thiệu</p>
 <h2 class="section-title">
-A Little About <span>Me.</span>
+Thông tin <span>cơ bản.</span>
 </h2>
 
 <p class="section-desc">
@@ -759,7 +910,7 @@ hành trình học tập và niềm đam mê
 <div class="glass about-card">
 <h3>Xin chào!</h3>
 <p>
-Mình là [Hoàng Diệu Chiêm], một sinh viên
+ Helo, tôi một sinh viên
 yêu thích thiết kế website và công nghệ.
 Mình luôn cố gắng học hỏi các kỹ năng mới
 để phát triển bản thân mỗi ngày.
@@ -786,7 +937,7 @@ Mình luôn cố gắng học hỏi các kỹ năng mới
 
 <div class="info-row">
 <span>Sở thích</span>
-<strong>Design & Technology</strong>
+<strong>Nghe nhạc và Thể thao</strong>
 </div>
 </div>
 </div>
@@ -794,9 +945,9 @@ Mình luôn cố gắng học hỏi các kỹ năng mới
 
 <!-- KỸ NĂNG -->
 <section class="section reveal" id="skills">
-<p class="section-label">02 / MY SKILLS</p>
+<p class="section-label">02 / KỸ NĂNG CHUYÊN NGÀNH</p>
 <h2 class="section-title">
-Creative <span>Skills.</span>
+KỸ NĂNG <span>MÁY TÍNH.</span>
 </h2>
 
 <p class="section-desc">
@@ -838,10 +989,10 @@ bạn có thể chỉnh sửa cho phù hợp.
 
 <!-- DỊCH VỤ -->
 <section class="section reveal" id="services">
-<p class="section-label">03 / WHAT I DO</p>
+<p class="section-label">03 / CÔNG VIỆC</p>
 
 <h2 class="section-title">
-My <span>Services.</span>
+DANH MỤC <span>WEBSITE.</span>
 </h2>
 
 <p class="section-desc">
@@ -853,7 +1004,7 @@ Những lĩnh vực mình quan tâm và
 
 <div class="glass card">
 <div class="card-icon">✧</div>
-<h3>Web Design</h3>
+<h3>Website của tôi</h3>
 <p>
 Thiết kế website hiện đại,
 dễ sử dụng và tương thích
@@ -863,7 +1014,7 @@ nhiều thiết bị.
 
 <div class="glass card">
 <div class="card-icon">◈</div>
-<h3>UI / UX Design</h3>
+<h3>Mô phỏng / Trang trí</h3>
 <p>
 Xây dựng giao diện đẹp,
 bố cục rõ ràng và trải nghiệm
@@ -873,7 +1024,7 @@ người dùng thân thiện.
 
 <div class="glass card">
 <div class="card-icon">✳</div>
-<h3>Creative Design</h3>
+<h3>TẠO NÊN MỚI MẺ</h3>
 <p>
 Khám phá những ý tưởng mới
 và sáng tạo trong thiết kế.
@@ -885,10 +1036,10 @@ và sáng tạo trong thiết kế.
 
 <!-- DỰ ÁN -->
 <section class="section reveal" id="portfolio">
-<p class="section-label">04 / MY PORTFOLIO</p>
+<p class="section-label">04 / DỰ ÁN</p>
 
 <h2 class="section-title">
-Selected <span>Works.</span>
+SẢN PHẨM <span> CỦA TÔI.</span>
 </h2>
 
 <p class="section-desc">
@@ -900,7 +1051,10 @@ sản phẩm thực tế của mình.
 <div class="projects-grid">
 
 <article class="glass project-card">
-<div class="project-image">01</div>
+<div class="project-image">
+    <img src="assets/img/ảnh 3.jpg"
+         alt="Ảnh dự án Modern Landing Page">
+</div>
 <div class="project-body">
 <small>HTML / CSS / JAVASCRIPT</small>
 <h3>Personal Portfolio</h3>
@@ -912,7 +1066,10 @@ với hiệu ứng ánh sáng hiện đại.
 </article>
 
 <article class="glass project-card">
-<div class="project-image">02</div>
+<div class="project-image">
+    <img src="assets/img/ảnh 2.jpg"
+         alt="Ảnh dự án Modern Landing Page">
+</div>
 <div class="project-body">
 <small>UI DESIGN / CONCEPT</small>
 <h3>Creative Dashboard</h3>
@@ -924,7 +1081,10 @@ với hiệu ứng ánh sáng hiện đại.
 </article>
 
 <article class="glass project-card">
-<div class="project-image">03</div>
+<div class="project-image">
+    <img src="assets/img/ảnh 1.png"
+         alt="Ảnh dự án Modern Landing Page">
+</div>
 <div class="project-body">
 <small>WEB DESIGN / CONCEPT</small>
 <h3>Modern Landing Page</h3>
@@ -953,7 +1113,7 @@ Có ý tưởng thú vị? Hãy liên hệ với mình
 để cùng chia sẻ và kết nối.
 </p>
 
-<a href="mailto:you@example.com" class="btn">
+<a href="hoangdieuchiem989@gmail.com" class="btn">
 Contact Me ✉
 </a>
 </div>
@@ -962,7 +1122,7 @@ Contact Me ✉
 </main>
 
 <footer>
-© 2026 YOUR NAME. ALL RIGHTS RESERVED.
+© 2026 LIÊN HỆ. CÁC PHƯƠNG THỨC Ở TRÊN.
 </footer>
 
 <script>
