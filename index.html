@@ -13,7 +13,7 @@
 :root {
 --bg: #d3c756;
 --text: #f4f6f4;
---muted: #64c93f;
+--muted: #14532d;
 --accent: #e0e6dd;
 --accent2: #000101;
 --border: rgba(2, 3, 2, 0.14);
@@ -398,7 +398,7 @@ margin-bottom: 18px;
 }
 
 .about-card p {
-color: var(--muted);
+color: #fff;
 line-height: 1.9;
 }
 
@@ -453,7 +453,7 @@ margin-bottom: 13px;
 }
 
 .card p {
-color: var(--muted);
+color: #fff;
 line-height: 1.8;
 }
 
@@ -515,7 +515,7 @@ margin: 12px 0;
 }
 
 .project-body p {
-color: var(--muted);
+color: #fff;
 line-height: 1.8;
 }
 
@@ -536,18 +536,48 @@ font-size: clamp(35px, 5vw, 65px);
 margin-bottom: 20px;
 }
 
-.contact-box p {
-color: var(--muted);
+.contact-box .section-label,
+.contact-box > p:not(.section-label) {
+color: #ff8acb;
 margin-bottom: 30px;
 line-height: 1.8;
 }
+.contact-form {
+    max-width: 500px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
+.contact-form input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: white;
+    color: #222;
+}
+
+.contact-form input:focus {
+    box-shadow: 0 0 0 3px #f97316;
+}
+
+.contact-form button {
+    margin: 10px auto;
+}
+
+#contactMessage {
+    color: white;
+}
 /* FOOTER */
 footer {
 padding: 30px 5%;
 text-align: center;
 border-top: 1px solid var(--border);
-color: #b4c62b;
+color: #14532d;
 font-size: 13px;
 }
 
@@ -992,10 +1022,31 @@ Something Amazing.
 Có ý tưởng thú vị? Hãy liên hệ với mình
 để cùng chia sẻ và kết nối.
 </p>
+<!-- FORM THÔNG TIN LIÊN HỆ -->
+<form class="contact-form" id="contactForm">
 
-<a href="hoangdieuchiem989@gmail.com" class="btn">
-Contact Me ✉
-</a>
+    <input type="email"
+           id="contactEmail"
+           placeholder="✉ Nhập địa chỉ Email"
+           required>
+
+    <input type="tel"
+           id="contactPhone"
+           placeholder="☎ Nhập số điện thoại"
+           required>
+
+    <input type="text"
+           id="contactAddress"
+           placeholder="⌂ Nhập địa chỉ của bạn"
+           required>
+
+    <button type="submit" class="btn">
+        Gửi thông tin ✉
+    </button>
+
+    <p id="contactMessage"></p>
+
+</form>
 </div>
 </section>
 
@@ -1061,7 +1112,14 @@ document.getElementById("logoutButton").addEventListener("click", function () {
     sessionStorage.removeItem("demoUser");
     window.location.href = "Login.html";
 });
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
+    document.getElementById("contactMessage").textContent =
+        "Cảm ơn bạn! Thông tin đã được ghi nhận.";
+
+    this.reset();
+});
 </script>
 
 </body>
