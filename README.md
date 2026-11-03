@@ -1,139 +1,50 @@
-# Portfolio CV - Hoàng Diệu Chiêm
+# Portfolio cá nhân — Hoàng Diệu Chiêm
 
-Trang portfolio/CV cá nhân giới thiệu Hoàng Diệu Chiêm, Frontend Developer. Dự án được xây dựng bằng HTML và CSS thuần, trình bày thông tin giới thiệu, kỹ năng, các dự án tiêu biểu và phương thức liên hệ trong một trang web responsive.
+Website portfolio cá nhân giới thiệu thông tin, kỹ năng, lĩnh vực quan tâm và các dự án mẫu. Giao diện được xây dựng trong một trang HTML, có bố cục responsive và nội dung tiếng Việt.
 
-## Chức năng
+## Nội dung và tính năng
 
-- Điều hướng đến các phần Giới thiệu, Kỹ năng, Dự án và Liên hệ.
-- Hiển thị thông tin cá nhân, vai trò nghề nghiệp và ảnh đại diện.
-- Trình bày kỹ năng chuyên môn dưới dạng danh sách.
-- Giới thiệu bốn dự án mẫu: Landing Page Sản Phẩm, Ứng dụng Todo List, Weather Dashboard và Blog Cá Nhân.
-- Cung cấp email và liên kết GitHub, LinkedIn.
-- Tương thích với màn hình điện thoại, máy tính bảng và máy tính.
-- Hỗ trợ điều hướng bằng liên kết neo, cuộn mượt và một số thuộc tính hỗ trợ trình đọc màn hình.
+- Các khu vực Trang chủ, Giới thiệu, Kỹ năng, Công việc, Dự án và Liên hệ.
+- Menu điều hướng thu gọn trên màn hình nhỏ và hiệu ứng xuất hiện khi cuộn.
+- Biểu mẫu liên hệ kiểm tra các trường bắt buộc ở trình duyệt và hiển thị thông báo xác nhận. Biểu mẫu hiện chỉ là minh họa: không gửi hoặc lưu dữ liệu.
+- Trang đăng nhập demo (`Login.html`) sử dụng `sessionStorage`; đây không phải hệ thống xác thực thật.
+- Ảnh nằm trong `assets/img/`; CSS và JavaScript của portfolio được đặt trực tiếp trong `index.html`.
 
-> **Lưu ý:** Nội dung dự án và thông tin liên hệ trên trang hiện mang tính minh họa. Hãy cập nhật thông tin cá nhân, liên kết dự án và ảnh đại diện trước khi sử dụng chính thức.
+## Chạy website
 
-## Công nghệ sử dụng
+Mở `index.html` bằng trình duyệt hiện đại. Không cần cài dependency hoặc chạy bước build.
 
-- **HTML5:** cấu trúc nội dung và các phần tử ngữ nghĩa.
-- **CSS3:** giao diện, bố cục Flexbox/Grid, hiệu ứng và responsive theo hướng mobile-first.
-- **JavaScript:** chưa được sử dụng trong phiên bản hiện tại.
-- **Không sử dụng framework, thư viện bên ngoài, trình quản lý gói hoặc quy trình build.**
+Để chạy qua máy chủ HTTP cục bộ, mở terminal tại thư mục dự án và chạy:
 
-## Yêu cầu môi trường
+```powershell
+py -m http.server 8000
+```
 
-- Windows, macOS hoặc Linux.
-- Trình duyệt web hiện đại như Chrome, Firefox, Edge hoặc Safari.
-- Không cần cài Node.js hay tải thêm thư viện để xem trang.
-- **Tùy chọn:** Python 3 nếu muốn chạy trang qua máy chủ HTTP cục bộ thay vì mở trực tiếp tệp HTML.
-- **Tùy chọn:** Visual Studio Code và tiện ích Live Server để thuận tiện xem trước khi phát triển.
+Sau đó truy cập `http://localhost:8000`. Nếu chưa có lệnh `py`, có thể dùng `python -m http.server 8000`.
 
-## Cấu trúc dự án
+## Cấu trúc chính
 
 ```text
 .
 ├── index.html
+├── Login.html
 ├── assets/
 │   ├── css/
-│   │   └── styles.css
 │   └── img/
-│       └── avatar.jpg
-└── README.md
+├── docs/
+│   ├── screenshots/
+│   └── test_report.md
+└── test_report.md
 ```
 
-## Cài đặt và cấu hình
+## Lưu ý trước khi phát hành
 
-1. Tải hoặc sao chép mã nguồn dự án về máy.
-2. Giữ nguyên cấu trúc thư mục để các đường dẫn tới CSS và ảnh hoạt động:
-   - CSS: `assets/css/styles.css`
-   - Ảnh đại diện: `ass/css/img`
-3. Mở `index.html` bằng trình soạn thảo để chỉnh sửa nội dung.
-4. Trước khi xuất bản, cập nhật thông tin mẫu trong `index.html`, bao gồm email, URL GitHub, LinkedIn, mô tả và liên kết các dự án. Thay ảnh tại `assets/css/images.jpg` nếu cần; nên giữ nguyên tên tệp hoặc cập nhật đường dẫn ảnh tương ứng trong HTML.
+- Thay nội dung dự án mẫu, địa chỉ email và các liên kết mạng xã hội bằng thông tin thật.
+- Biểu mẫu liên hệ chưa kết nối backend; không nhập thông tin nhạy cảm.
+- Trang đăng nhập chỉ phục vụ minh họa giao diện, không bảo vệ nội dung.
+- Font chữ được tải từ Google Fonts khi có kết nối Internet.
 
-Dự án không có tệp cấu hình môi trường `.env` và không cần cài đặt dependency.
+## Tài liệu
 
-## Chạy thử
-
-### Cách nhanh: mở trực tiếp bằng trình duyệt
-
-Mở thư mục dự án rồi nhấp đúp vào `index.html`, hoặc chọn mở tệp này bằng trình duyệt. Cách này phù hợp để xem giao diện cơ bản.
-
-### Chạy bằng máy chủ HTTP cục bộ
-
-Máy chủ cục bộ giúp xem trang qua địa chỉ `http://localhost:8000` và phản ánh sát hơn cách website được phục vụ. Cài Python 3 trước nếu máy chưa có Python.
-
-#### Windows
-
-1. Mở **PowerShell** hoặc **Windows Terminal**.
-2. Chuyển đến thư mục dự án (thay đường dẫn mẫu bằng vị trí thực tế của bạn):
-
-   ```powershell
-   cd "C:\duong-dan\den\thu-muc-du-an"
-   ```
-
-3. Khởi chạy máy chủ:
-
-   ```powershell
-   py -m http.server 8000
-   ```
-
-   Nếu lệnh `py` không có sẵn, thử:
-
-   ```powershell
-   python -m http.server 8000
-   ```
-
-4. Mở `http://localhost:8000` trong trình duyệt.
-5. Nhấn `Ctrl+C` trong cửa sổ terminal để dừng máy chủ.
-
-#### macOS
-
-1. Mở **Terminal**.
-2. Chuyển đến thư mục dự án:
-
-   ```bash
-   cd "/duong-dan/den/thu-muc-du-an"
-   ```
-
-3. Khởi chạy máy chủ:
-
-   ```bash
-   python3 -m http.server 8000
-   ```
-
-4. Mở `http://localhost:8000` trong trình duyệt.
-5. Nhấn `Control+C` trong Terminal để dừng máy chủ.
-
-#### Linux
-
-1. Mở ứng dụng **Terminal**.
-2. Chuyển đến thư mục dự án:
-
-   ```bash
-   cd "/duong-dan/den/thu-muc-du-an"
-   ```
-
-3. Khởi chạy máy chủ:
-
-   ```bash
-   python3 -m http.server 8000
-   ```
-
-4. Mở `http://localhost:8000` trong trình duyệt.
-5. Nhấn `Ctrl+C` trong Terminal để dừng máy chủ.
-
-> Nếu cổng `8000` đang được sử dụng, thay `8000` trong lệnh chạy và địa chỉ truy cập bằng một cổng khác, ví dụ `8080`.
-
-### Xem trước bằng Visual Studio Code (tùy chọn)
-
-Mở thư mục dự án trong Visual Studio Code, cài tiện ích **Live Server** nếu chưa có, sau đó nhấp chuột phải vào `index.html` và chọn **Open with Live Server**. Trình duyệt sẽ mở trang qua máy chủ cục bộ.
-
-## Thông tin liên hệ
-
-- **Tên hiển thị:** Nguyễn Văn An
-- **Email mẫu:** [an.nguyen@example.com](mailto:an.nguyen@example.com)
-- **GitHub mẫu:** `github.com/nguyenvanan`
-- **LinkedIn mẫu:** `linkedin.com/in/nguyenvanan`
-
-Các địa chỉ trên là dữ liệu minh họa từ trang hiện tại, không nên xem là thông tin liên hệ đã được xác minh. Hãy thay bằng thông tin thật trước khi công khai website.
+- [Báo cáo kiểm thử](docs/test_report.md)
+- [Ảnh chụp giao diện](docs/screenshots/)
